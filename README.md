@@ -9,6 +9,6 @@
     - My favorite hobby is playing cricket and basketball.
     - Another hobby I have is watching the UFC.
 ## My Favorite Websites
-[Google News](https://news.google.com/) -  I find that google news provides me with all the news I need.
+[Google News](https://news.google.com/) -  I find that google news provides me with all the news I need as it personalizes the news by my interests.
 
 [ESPN](https://www.espn.com/) -  ESPN allows me to see all the sports that are being played today and the scores in those games.
