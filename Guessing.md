@@ -1,12 +1,11 @@
+```mermaid
 flowchart TD
-    Start([Start]) --> GenerateRandomNumber[Generate Random Number]
-    GenerateRandomNumber --> GetUserGuess[Get User Guess]
-    GetUserGuess --> ValidateInput{Is Input Valid?}
-    ValidateInput -->|Yes| CheckGuess[Check Guess]
-    ValidateInput -->|No| DisplayError[Display Error Message]
-    DisplayError --> GetUserGuess
-    CheckGuess -->|Too High| ProvideFeedback[Provide Feedback: Too High]
-    CheckGuess -->|Too Low| ProvideFeedback[Provide Feedback: Too Low]
-    CheckGuess -->|Correct| Congratulate[Congratulate User]
-    ProvideFeedback --> GetUserGuess
-    Congratulate --> End([End])
+    Start([Start Game]) --> RandomNum[Generate Random Number]
+    RandomNum --> Input[Ask User for a Guess]
+    Input --> Validate{Is input valid?}
+    Validate -->|No| Error[Show Error Message] --> Input
+    Validate -->|Yes| Compare{Is Guess Correct?}
+    Compare -->|Yes| Correct[Show 'Correct' Message] --> End([End Game])
+    Compare -->|No| Feedback{Is Guess Too High or Too Low?}
+    Feedback -->|Too High| High[Show 'Too High' Message] --> Input
+    Feedback -->|Too Low| Low[Show 'Too Low' Message] --> Input
