@@ -23,7 +23,7 @@ erDiagram
     }
 
     INVENTORY {
-        string product_id PK FK
+        string product_id FK
         int stock_quantity
         date last_updated
     }
